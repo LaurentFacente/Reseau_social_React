@@ -4,7 +4,7 @@ const PostModel = require('../models/post')
 const posts = require('./importPost')
 
 
-  
+// Connecion de l'API avec la base de donnée
 const sequelize = new Sequelize('groupomaniadb', 'root', '', {
   host: 'localhost',
   dialect: 'mariadb',
@@ -13,10 +13,11 @@ const sequelize = new Sequelize('groupomaniadb', 'root', '', {
   },
   logging: false
 })
-  
+// Importation des models
 const User = UserModel(sequelize, DataTypes)
 const Post = PostModel(sequelize, DataTypes)
-  
+
+// Creation de la fonction d'initialisation de la db + creation des messages 
 const initDb = () => {
   return sequelize.sync({force: true}).then(_ => {
     posts.map(post => {
