@@ -3,7 +3,7 @@ const posts = [
      id: 1,
      title: "Fist !",
      content: "Premier message sur le nouveau reseau social de Groupomania",
-     attachment: "",
+     attachment: "Photo",
      created: new Date()
     },
      {
