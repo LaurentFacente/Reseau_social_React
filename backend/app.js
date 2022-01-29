@@ -25,6 +25,7 @@ require('./routes/findPostByPk')(app) // Ok mais ne lit pas les data
 require('./routes/createPost')(app) // Ok
 require('./routes/updatePost')(app) // Eror
 require('./routes/deletePost')(app) // Error
+require('./routes/login')(app)
 
 app.use('/images', express.static(path.join(__dirname, 'images')));
 
