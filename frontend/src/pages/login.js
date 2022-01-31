@@ -1,12 +1,12 @@
 import React from "react";
-import "./login.css";
+import "./Login.css";
 
-const login = () => {
+const Login = () => {
     return (
-        <div className="home">
-            Coucou from home
+        <div>
+           <p> Page de Login de l'app</p> 
         </div>
     );
 };
 
-export default login;
+export default Login;
