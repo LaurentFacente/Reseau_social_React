@@ -2,6 +2,7 @@ import React from "react";
 import "./Login.css";
 import axios from "axios";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Login = () => {
     const [username, setUsername] = useState("");
@@ -46,7 +47,7 @@ const Login = () => {
                          <label htmlFor="password"></label>
                          <input type="password" name="password" id="password" placeholder="password" onChange={(e) => setPassword(e.target.value)}value={password}/>
                          <button type="submit" href="/Feed">Login</button>
-                         <p className="message">Si c'est votre premiere connexion, cette action vous créra un compte.</p>
+                         <p className="message">Pas encore inscrit ? <Link to="/register">Créez un compte !</Link></p>
                     </form>
                  </div>
             </div>

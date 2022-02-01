@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css?family=Merriweather|Open+Sans');
+
+.container{
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+ 
+  
+}
+
+.square{
+  width: 600px;
+  height: 430px;
+  background: white;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+
+}
+
+.mask{
+  clip: rect(0px, 460px, 220px, 0px);
+  border-radius: 4px 4px 0px 0px ;
+  width: 600px;
+  height: 250px;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
+}
+
+img{
+  width: 100%;
+  }
+
+.h1{
+  margin: auto;
+  text-align: left;
+  margin-top: 30px;
+  padding-left: 30px;
+  
+  font-family: 'Merriweather', serif;
+  font-size: 24px;
+}
+p{
+ text-align: justify; 
+ padding-left: 30px;
+ padding-right: 30px;
+ font-family: 'Open Sans', sans-serif;
+ font-size: 12px;
+ color: #C8C8C8;
+ line-height: 18px;
+}
+
