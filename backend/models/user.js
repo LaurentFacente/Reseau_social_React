@@ -7,10 +7,7 @@ module.exports = (sequelize, DataTypes) => {
     },
     username: {
       type: DataTypes.STRING,
-      allowNull: false,
-      unique: {
-        msg:"Ce nom d'utilisateur est deja pris !"
-      }
+      allowNull: false
     },
     password: {
       type: DataTypes.STRING,
@@ -18,7 +15,7 @@ module.exports = (sequelize, DataTypes) => {
     },
     isAdmin: {
       type: DataTypes.BOOLEAN,
-      allowNull: false
+      default: false
     },
   }, {
     timestamps: true,

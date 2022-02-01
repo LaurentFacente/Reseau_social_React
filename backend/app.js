@@ -26,6 +26,7 @@ require('./routes/createPost')(app) // Ok
 require('./routes/updatePost')(app) // Eror
 require('./routes/deletePost')(app) // Error
 require('./routes/login')(app)
+require('./routes/register')(app)
 
 app.use('/images', express.static(path.join(__dirname, 'images')));
 
