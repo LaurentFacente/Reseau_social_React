@@ -41,13 +41,14 @@ const Login = () => {
            <h1>Bienvenue sur le reseau social de Groupomania</h1>
            <div className="login-page">
                 <div className="form">
+                  <div className="message2">Connexion </div>
                     <form action="" onSubmit={handleLogin} id="sign-up-form" className="login-form">
                     <label htmlFor="username"></label>
                          <input type="text" name="username" id="username" placeholder="username" onChange={(e) => setUsername(e.target.value)}value={username}/>
                          <label htmlFor="password"></label>
                          <input type="password" name="password" id="password" placeholder="password" onChange={(e) => setPassword(e.target.value)}value={password}/>
-                         <button type="submit" href="/Feed">Login</button>
-                         <p className="message">Pas encore inscrit ? <Link to="/register">Créez un compte</Link></p>
+                         <button type="submit" href="/Feed">Connexion</button>
+                         <p className="message">Pas encore inscrit ? <Link to="/Register">Créez un compte</Link></p>
                     </form>
                  </div>
             </div>
