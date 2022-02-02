@@ -40,6 +40,8 @@ const Register = () => {
         <div className="loginPage">
            <img className="logo" src="../images/icon-left-font-monochrome-white.png" alt="groupomania icon" width="300px"></img>
            <h1>Bienvenue sur le reseau social de Groupomania</h1>
+           <h2>Travaillez plus efficacement, ensemble</h2>
+           <p className="presentation">Le réseau social d'entreprise Groupomania simplifie le partage d'information dans votre entreprise et facilite le travail collaboratif, au quotidien.</p>
            <div className="login-page">
                 <div className="form">
                 <div className="message2">Inscription </div>
