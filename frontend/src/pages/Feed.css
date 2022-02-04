@@ -11,7 +11,7 @@
 
 .square{
   width: 600px;
-  height: 400px;
+  height: 500px;
   background: white;
   border-radius: 4px;
   -webkit-box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
@@ -25,12 +25,15 @@
   clip: rect(0px, 460px, 220px, 0px);
   border-radius: 4px 4px 0px 0px ;
   width: 600px;
-  height: 250px;
+  height: 350px;
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
+  background-size: cover;
+  background-position: center;
 }
 
 img{
   width: 100%;
+
   }
 
 .h1{

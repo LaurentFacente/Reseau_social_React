@@ -30,7 +30,7 @@ const Posts = () => {
           
       <div>
          
-            {posts.map((post) => (
+            {posts.slice(0).reverse().map((post) => (
               <div key={post.id} className="container">
               <div className="square">
               <div >
