@@ -20,15 +20,17 @@ app.use(bodyParser.json());
 sequelize.initDb();
 
 // Endpoints
-require('./routes/findAllPost')(app) // Ok
-require('./routes/findPostByPk')(app) // Ok mais ne lit pas les data
-require('./routes/createPost')(app) // Ok
-require('./routes/updatePost')(app) // Eror
-require('./routes/deletePost')(app) // Error
+require('./routes/findAllPost')(app) 
+require('./routes/findPostByPk')(app) 
+require('./routes/createPost')(app) 
+require('./routes/updatePost')(app) 
+require('./routes/deletePost')(app) 
 require('./routes/login')(app)
 require('./routes/register')(app)
 
 app.use('/images', express.static(path.join(__dirname, 'images')));
+
+
 
 
 

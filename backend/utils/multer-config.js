@@ -1,35 +1,16 @@
-const multer = require('multer');
-//const de dictionnaire d'extensions
-const MIME_TYPES = {
-  'image/jpg': 'jpg',
-  'image/jpeg': 'jpg',
-  'image/png': 'png'
-};
-/**
- * nous créons une constante storage ,
- *  à passer à multer comme configuration, qui contient la logique nécessaire pour indiquer à multer où enregistrer les fichiers entrants
- */
+const multer = require("multer");
+const path = require("path");
+
 const storage = multer.diskStorage({
-    //la fonction destination indique à multer d'enregistrer les fichiers dans le dossier images
-  destination: (req, file, callback) => {
-    callback(null, 'images');
+  destination: (req, file, cb) => {
+    cb (null, "./images")
+  
   },
   filename: (req, file, callback) => {
-    const name = file.originalname.split(' ').join('_');
-    console.log(file);
-    /**
-     * la fonction filename indique à multer d'utiliser le nom d'origine, de remplacer les espaces par des underscores
-     *  et d'ajouter un timestamp Date.now() comme nom de fichier. Elle utilise ensuite la
-     * constante dictionnaire de type MIME pour résoudre l'extension de fichier appropriée
-     */
-    const extension = MIME_TYPES[file.mimetype];
-    callback(null, name + Date.now() + '.' + extension);
-  }
+    callback(null, Date.now() + path.extname(file.originalname));
+  },
 });
 
-/**
- * nous exportons ensuite l'élément multer entièrement configuré, 
- * lui passons notre constante storage et lui indiquons que nous gérerons uniquement les téléchargements de fichiers image
- */
+const upload = multer({storage: storage});
 
-module.exports = multer({storage: storage}).single('image');
+module.exports = upload
