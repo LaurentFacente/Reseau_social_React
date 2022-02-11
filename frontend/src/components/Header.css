@@ -1,0 +1,28 @@
+header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+    background: rgb(173, 62, 62);
+    width: 100%;
+   
+}
+
+.logo {
+    margin-left: 60px;
+    margin-top: 15px;
+    width: 25%;
+}
+
+.login_button {
+    
+    font-family: "Roboto", sans-serif;
+    text-decoration: none;
+    font-size: 14px;
+    color: white;
+    margin-right: 80px;
+    font-weight: 600;
+    
+    
+}
