@@ -1,8 +1,9 @@
 import React from "react";
-import "./Register.css";
+import "./Login.css";
 import axios from "axios";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import Header from "../components/Header";
 
 
 const Register = () => {
@@ -38,11 +39,16 @@ const Register = () => {
   };
     return (
         <div className="loginPage">
-           <img className="logo" src="../images/icon-left-font-monochrome-white.png" alt="groupomania icon" width="300px"></img>
+           <Header />
+           <div className="container_all">
+          <div className="container_text">
            <h1>Bienvenue sur le reseau social de Groupomania</h1>
            <h2>Travaillez plus efficacement, ensemble</h2>
            <p className="presentation">Le réseau social d'entreprise Groupomania simplifie le partage d'information dans votre entreprise et facilite le travail collaboratif, au quotidien.</p>
            <div className="login-page">
+             </div>
+             </div>
+             <div className="container_form">
                 <div className="form">
                 <div className="message2">Inscription </div>
                     <form action="" onSubmit={handleRegister} id="sign-up-form" className="login-form">
@@ -53,9 +59,11 @@ const Register = () => {
                          <button type="submit" href="/Feed">Inscription</button>
                          <p className="message">Vous avez deja un compte ? <Link to="/">Connectez vous</Link></p>
                     </form>
+                    </div>
                  </div>
             </div>
-        </div>
+            </div>
+        
     );
 };
 
