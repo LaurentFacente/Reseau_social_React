@@ -4,6 +4,7 @@ import axios from "axios";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import Header from "../components/Header";
+import Footer from "../components/Footer";
 
 
 const Register = () => {
@@ -62,6 +63,7 @@ const Register = () => {
                     </div>
                  </div>
             </div>
+            <Footer />
             </div>
         
     );

@@ -18,11 +18,12 @@ header {
 .login_button {
     
     font-family: "Roboto", sans-serif;
+    cursor: pointer;
     text-decoration: none;
     font-size: 14px;
     color: white;
     margin-right: 80px;
     font-weight: 600;
-    
-    
+     
 }
+

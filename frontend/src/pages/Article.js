@@ -3,6 +3,11 @@ import { Link, useParams } from 'react-router-dom'
 import axios from 'axios';
 import { useEffect, useState } from 'react'
 import Header from '../components/Header';
+import Footer from '../components/Footer';
+import "./Article.css";
+import { FaTrashAlt } from 'react-icons/fa';
+
+
 
 
 const Article = () => {
@@ -23,23 +28,39 @@ const Article = () => {
           
         } catch (error) {
           alert(error.message)
-          
         }
       }
+
+      const deleteArticle = async () => {
+        try {
+          const res = await axios.delete("http://localhost:3000/api/posts/" + id )
+          console.log(`L'article ${ id } à été suprimé`)
+          setArticle(res.data.data)
+          window.location = "/Feed";
+          
+        } catch (error) {
+          alert(error.message)
+        }
+      }
+
+
   return (
     <div>
         <Header></Header>
-       <h2>{article.title}</h2>
-       <Link to="/Feed">Retour</Link>
-       <div key={article.id} className="container">
-                <div className="square">
-                     <img src={article.attachment} className="mask"></img>
-                     <div className="h1">{article.title}</div>
+       
+       <div key={article.id} className="container_article">
+       <div className='btn_suppr' onClick={deleteArticle}><FaTrashAlt /></div>
+                <div className="square_article">
+                     <img src={article.attachment} className="mask_article"></img>
+                     <div className="h1_article">{article.title}</div>
                      <p>{article.content}</p>
-                   
                 </div>
               </div>
+              
+              <Footer></Footer>
+              
     </div>
+  
   )
 }
 
