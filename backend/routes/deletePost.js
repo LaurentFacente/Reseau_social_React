@@ -1,7 +1,8 @@
 const { Post } = require('../db/sequelize')
+const auth = require('../auth/auth')
   
 module.exports = (app) => {
-  app.delete('/api/posts/:id', (req, res) => {
+  app.delete('/api/posts/:id', auth, (req, res) => {
     Post.findByPk(req.params.id).then(post => {
       const postDeleted = post;
       Post.destroy({

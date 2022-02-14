@@ -1,7 +1,8 @@
 const { Post } = require('../db/sequelize')
+const auth = require('../auth/auth')
   
 module.exports = (app) => {
-  app.put('/api/posts/:id', (req, res) => {
+  app.put('/api/posts/:id', auth, (req, res) => {
     const id = req.params.id
     Post.update(req.body, {
       where: { id: id }

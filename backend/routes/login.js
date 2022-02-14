@@ -18,18 +18,15 @@ module.exports = (app) => {
           const message = `Le mot de pass est incorrect.`;
           return res.status(401).json({ message })
         }
-
-        // JWT
-        const token = jwt.sign(
+            const token = jwt.sign(
             { userId: user.id },
             privateKey,
             { expiresIn : '24h'}
         )
-
-
-
+        
         const message = `L'utilisateur a été connecté avec succès`;
           return res.json({ message, data: user, token })
+          
       })
     })
     .catch(error => {

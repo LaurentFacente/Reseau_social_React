@@ -27,6 +27,8 @@ require('./routes/updatePost')(app)
 require('./routes/deletePost')(app) 
 require('./routes/login')(app)
 require('./routes/register')(app)
+require('./routes/deleteUser')(app)
+require('./routes/findUserbyPk')(app)
 
 app.use('/images', express.static(path.join(__dirname, 'images')));
 
