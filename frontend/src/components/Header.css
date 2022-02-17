@@ -22,8 +22,9 @@ header {
     text-decoration: none;
     font-size: 14px;
     color: white;
-    margin-right: 80px;
+    margin-right: 130px;
     font-weight: 600;
+    
 }
 
 .delete_profil{
@@ -33,8 +34,11 @@ header {
     text-decoration: none;
     font-size: 14px;
     color: white;
-    margin-right: 80px;
     font-weight: 600;
+    margin-left: 60px;
+    display: inline;
+    white-space: nowrap;
+    margin-right: 20px;
 
 }
 
