@@ -7,8 +7,10 @@ import Register from "./pages/Register";
 import Article from "./pages/Article";
 import axios from "axios";
 
-const token = localStorage.getItem('token')
 
+// Recuperation du token JWT dans le local storage
+const token = localStorage.getItem('token')
+// On utilise cette methode pour soumettre notre token a toute les routes qui en on besoin pour etre affichée
 axios.interceptors.request.use(
   config => {
     config.headers.authorization = `${token}`;
@@ -19,22 +21,18 @@ axios.interceptors.request.use(
  }
 )
 
+//Logique de routing de l'application
 const App = () => {
- 
   return (
      
          <Router>
-          
              <Routes>
                 <Route path="/" element={<Login />}></Route>
                 <Route path="/Register" element={<Register />}></Route>
                 <Route path="/Feed" element={<Feed />}/>
-                <Route path="/:id" element={<Article />}/>
-                
-            </Routes>
-            
-        </Router>
-       
+                <Route path="/:id" element={<Article />}/>  
+            </Routes> 
+        </Router>    
   );
 };
 
