@@ -42,11 +42,13 @@ return(
           setArticle(res.data.data)
           
         } catch (error) {
-          alert(error.message)
+          alert(`Vous n'avez pas accès a cette page, veuillez vous connecter.`)
+          window.location = "/";
         }
       }
       // Gestion de la logique de supression d'un article
       const deleteArticle = async () => {
+        window.confirm(`La supression d'un article est irreversible, êtes-vous sur ?`)
         try {
           const res = await axios.delete("http://localhost:3000/api/posts/" + id )
           console.log(`L'article ${ id } à été suprimé`)
@@ -54,7 +56,8 @@ return(
           window.location = "/Feed";
           
         } catch (error) {
-          alert(error.message)
+          alert(`Vous n'avez pas accès a cette page, veuillez vous connecter.`)
+          window.location = "/";
         }
       }
       // Gestion de la logique de supression d'un User
@@ -65,13 +68,15 @@ return(
         
         try {
           // On declanche la supression, on clear le local storage et on redirige l'utilisateur
+          window.confirm(`La supression de votre est irreversible, êtes-vous sur ?`)
           const res = await axios.delete("http://localhost:3000/api/user/" + id )
           console.log(`L'user ${ id } à été suprimé`)
           localStorage.clear();
           window.location = "/Register";
           
         } catch (error) {
-          alert(error.message)
+          alert(`Vous n'avez pas accès a cette page, veuillez vous connecter.`)
+          window.location = "/";
         }
       }
 

@@ -41,6 +41,7 @@ const Login = () => {
         }
       })
       .catch((err) => {
+        alert(`Nom d'utilisateur ou mot de passe incorect`)
         console.log(err);
       });
   };

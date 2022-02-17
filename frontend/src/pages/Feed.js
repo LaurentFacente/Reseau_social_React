@@ -22,7 +22,9 @@ const Posts = () => {
         const res = await axios.get("http://localhost:3000/api/posts")
         setPosts(res.data.data)
       } catch (error) {
-        alert(error.message)
+        alert(`Vous n'avez pas accès a cette page, veuillez vous connecter.`)
+        window.location = "/";
+        
       }
     }
     // Gestion de la soumission d'un nouveau post
@@ -60,6 +62,7 @@ const Posts = () => {
       
       try {
         // On declanche la supression, on clear le local storage et on redirige l'utilisateur 
+        window.confirm(`La supression de votre profil est irreversible, êtes-vous sur ?`)
         const res = await axios.delete("http://localhost:3000/api/user/" + id )
         console.log(`L'user ${ id } à été suprimé`)
         localStorage.clear();

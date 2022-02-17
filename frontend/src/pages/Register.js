@@ -34,6 +34,7 @@ const Register = () => {
         } else {
           // Regirection du la page Feed
           window.location = "/";
+          alert(`Votre profil a été crée avec succès !`)
         }
       })
       .catch((err) => {
