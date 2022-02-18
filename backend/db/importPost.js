@@ -23,7 +23,7 @@ const posts = [
      {
      id: 4,
      title: "Bienvenue à Julien !",
-     content: "Ajourd'hui, nous souhaiton la bienvenue a Julien qui viens aporter sa contribution et renforcer l'équipe Marketing, fort de ces 7 ans d'experience dans le domaine qui lui ont permis de acquerir de solides competences. Un nouvel élément fort pour notre entrprise !",
+     content: "Ajourd'hui, nous souhaiton la bienvenue a Julien qui viens aporter sa contribution et renforcer l'équipe Marketing, fort de ces 7 ans d'experience qui lui ont permis de acquerir de solides competences. Un nouvel élément fort pour notre entrprise !",
      attachment: "https://images.pexels.com/photos/2505026/pexels-photo-2505026.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260",
      created: new Date()
     },
