@@ -85,3 +85,84 @@ cursor: pointer;
 
 }
 
+
+@media(max-width: 415px){
+  html{
+    width: 414px;
+    
+  }
+ 
+
+
+  .mask_article{
+    width: 360px;
+    height: 200px;
+    margin-top: -102px;
+    
+  }
+  .square_article{
+    width: 360px;
+    height: 300px;
+    margin-top: 30px;
+    margin-bottom: 200px;
+    
+    
+  }
+
+  
+  header{
+    display: block;
+  }
+  
+   
+  
+  .login_button{
+    margin: 0;
+    
+
+  }
+  .logo{
+    width: 200px;
+    margin-top:-60px;
+    margin-left: 10px;
+    margin-right: 0px;
+  }
+  .h1_article{
+    margin: auto;
+    text-align: left;
+    margin-bottom: 5px;
+    padding-left: 10px;
+    color: black;
+    font-family: 'Merriweather', serif;
+    font-size: 10px;
+    margin-top: -11px;
+}
+.text_article{
+  
+  padding-left: 10px;
+  padding-right: 30px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 10px;
+  color: #837f7f;
+  line-height: 18px;
+  margin-top: -9px;
+ 
+ }
+
+ .delete_profil{
+   font-size: 10px;
+   margin-left: 250px;
+   margin-right: 0px;
+  
+   
+ 
+ }
+ .login_button{
+   font-size: 10px;
+   float: right;
+   margin-top: -155px;
+   margin-right: 20px;
+ }
+
+}
+

@@ -56,9 +56,9 @@ const Register = () => {
                   <div className="message2">Inscription </div>
                     <form action="" onSubmit={handleRegister} id="sign-up-form" className="login-form">
                       <label htmlFor="username"></label>
-                      <input type="text" name="username" id="username" placeholder="username" onChange={(e) => setUsername(e.target.value)}value={username}/>
+                      <input type="text" name="username" id="username" placeholder="Nom d'utilisateur" onChange={(e) => setUsername(e.target.value)}value={username}/>
                       <label htmlFor="password"></label>
-                      <input type="password" name="password" id="password" placeholder="password" onChange={(e) => setPassword(e.target.value)}value={password}/>
+                      <input type="password" name="password" id="password" placeholder="Mot de passe" onChange={(e) => setPassword(e.target.value)}value={password}/>
                       <button type="submit" href="/Feed">Inscription</button>
                       <p className="message">Vous avez deja un compte ? <Link to="/">Connectez vous</Link></p>
                     </form>

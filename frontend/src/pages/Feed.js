@@ -133,7 +133,7 @@ const Posts = () => {
                 <div className="square">
                      <img src={post.attachment} className="mask"></img>
                      <div className="h1">{post.title}</div>
-                     <p>{post.content}</p>  
+                     <p className="text_article">{post.content}</p>  
                 </div>
               </Link>
             ))}   

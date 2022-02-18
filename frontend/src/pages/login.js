@@ -62,9 +62,9 @@ const Login = () => {
                   <div className="message2">Connexion </div>
                     <form action="" onSubmit={handleLogin} id="sign-up-form" className="login-form">
                          <label htmlFor="username"></label>
-                         <input type="text" name="username" id="username" placeholder="username" onChange={(e) => setUsername(e.target.value)}value={username}/>
+                         <input type="text" name="username" id="username" placeholder="Nom d'utilisateur" onChange={(e) => setUsername(e.target.value)}value={username}/>
                          <label htmlFor="password"></label>
-                         <input type="password" name="password" id="password" placeholder="password" onChange={(e) => setPassword(e.target.value)}value={password}/>
+                         <input type="password" name="password" id="password" placeholder="Mot de passe" onChange={(e) => setPassword(e.target.value)}value={password}/>
                          <button type="submit" href="/Feed">Connexion</button>
                          <p className="message">Pas encore inscrit ? <Link to="/Register">Créez un compte</Link></p>
                     </form>

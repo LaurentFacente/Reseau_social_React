@@ -102,7 +102,7 @@ return(
                     <div className="square_article">
                       <img src={article.attachment} className="mask_article"></img>
                       <div className="h1_article">{article.title}</div>
-                      <p>{article.content}</p>
+                      <p className='text_article'>{article.content}</p>
                     </div>
               </div>
               <Footer></Footer>
