@@ -25,6 +25,54 @@ return(
 )
 }
 
+const updateForm = () =>{
+  
+ <button onClick={updateForm}></button>
+ return(
+
+  <div className="container">  
+              <form 
+              id="contact"
+              action="/api/posts" 
+              method="POST"
+              encType="multipart/form-data">
+              <p className="creez">Creez et partager un article avec vos collaborateurs</p>
+              <textarea  
+              name="title" 
+              id="message" 
+              placeholder="Donnez un titre a votre article" 
+              onChange={(e) => setTitle(e.target.value)}value={title} 
+              className="textareatitle" >
+              </textarea>
+              <textarea 
+              name="content" 
+              id="message" 
+              placeholder="Ecrivez un article !" 
+              onChange={(e) => setContent(e.target.value)}value={content} 
+              className="textAreaContent" ></textarea>
+              <div className="parent-div">
+              <button className="btn-upload">Ajoutez une photo
+              </button>
+              <input 
+               name="attachment" 
+               type="file" 
+               id="attachment"  
+               onChange={(e) => handlePicture(e)}/>
+              <div>
+                <img src={prevPicture}></img>
+              </div>
+              </div>
+              <button 
+              name="submit" 
+              type="submit" 
+              onClick={updatePost}>modifier
+              </button> 
+              </form>
+          </div>
+  
+ )
+ }
+
 
   // On recuperer l'ID du post grace a useParams
     const { id } = useParams();
@@ -80,6 +128,33 @@ return(
         }
       }
 
+    // Gestion de la modification post
+    // On ecoute les champs de creation d'un post
+    const [title, setTitle] = useState("")
+    const [content, setContent] = useState("")
+    const [attachment, setAttachment] = useState("")
+    const [prevPicture, setPrevPictture] = useState('')
+    
+    // Gestion de la previsualisation et de la soumission d'une photo
+    const handlePicture = (e) => {
+      setPrevPictture(URL.createObjectURL(e.target.files[0])) 
+      setAttachment(URL.createObjectURL(e.target.files[0]))
+      }
+    // On ecoute le bouton de soumission et on declanche la logique 
+    const updatePost = async (e) => {
+        const data = new FormData();
+        data.append('title', title)
+        data.append('content', content)
+        data.append('attachment', prevPicture)
+        console.log(data)
+        e.preventDefault();
+    // Appel a l'API de la route updatePost 
+        const res = await axios({method: "put", url: 'http://localhost:3000/api/posts/' + id,
+          data: {title,content,attachment},
+        })
+        setArticle(res.data.data)
+    }
+
   return (
     <div>
         <header>
@@ -95,9 +170,47 @@ return(
           <a className='login_button' onClick={() =>localStorage.clear()} href="http://localhost:3001/">Déconnexion</a>
           </div> 
           </header>
-       
+          <div className="container">  
+              <form 
+              id="contact"
+              action="/api/posts" 
+              method="POST"
+              encType="multipart/form-data">
+              <p className="creez">Modifier l'article</p>
+              <textarea  
+              name="title" 
+              id="message" 
+              placeholder="Donnez un titre a votre article" 
+              onChange={(e) => setTitle(e.target.value)}value={title} 
+              className="textareatitle" >
+              </textarea>
+              <textarea 
+              name="content" 
+              id="message" 
+              placeholder="Ecrivez un article !" 
+              onChange={(e) => setContent(e.target.value)}value={content} 
+              className="textAreaContent" ></textarea>
+              <div className="parent-div">
+              <button className="btn-upload">Ajoutez une photo
+              </button>
+              <input 
+               name="attachment" 
+               type="file" 
+               id="attachment"  
+               onChange={(e) => handlePicture(e)}/>
+              <div>
+                <img src={prevPicture}></img>
+              </div>
+              </div>
+              <button 
+              name="submit" 
+              type="submit" 
+              onClick={updatePost}>Modifier
+              </button> 
+              </form>
+          </div>
               <div key={article.id} className="container_article">
-               
+              <button onClick={updateForm}></button>
                   <Admin />
                     <div className="square_article">
                       <img src={article.attachment} className="mask_article"></img>
