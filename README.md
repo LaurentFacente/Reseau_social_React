@@ -1,4 +1,4 @@
-# ![left 100%](https://github.com/thierry-laval/archives/blob/master/images/Logo_OpenClassrooms.png?raw=true) OpenClassrooms - Développeur Web - Création d'un reseau social d’entreprise avec React / Node / MySQL
+# ![left 100%](https://github.com/thierry-laval/archives/blob/master/images/Logo_OpenClassrooms.png?raw=true) OpenClassrooms - Développeur Web - Création d'un réseau social d’entreprise avec React / Node / MySQL
 ## Auteur
 
 👤 &nbsp; **Laurent FACENTE**
