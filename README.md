@@ -18,7 +18,6 @@
 * Gérer un stockage de données à l'aide de SQL
 * Implémenter un stockage de données sécurisé en utilisant SQL
 
-
 ***
 
 ### Développement Frontend en JavaScript
