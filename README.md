@@ -89,18 +89,12 @@ npm start
 4️⃣ **Configuration de la base de données**
 
 - Assurez-vous que MySQL est installé et en cours d'exécution.
-- Créez une base de données avec le nom spécifié dans le fichier de configuration.
-- Configurez les informations de connexion à la base de données dans le fichier `.env`.
-- Initialisez les tables avec Sequelize en exécutant la migration :
+- Créez une base de données.
+- Configurez les informations de connexion à la base de données dans un fichier `.env` et ajoutez les à db/sequelize.js.
 
 ```sh
-npm run migrate
-```
-
-- (Optionnel) Insérer des données de test avec les seeders :
-
-```sh
-npm run seed
+mysql -u root -p
+CREATE DATABASE <Nom_de_la_base_de_donnees>;
 ```
 
 ---
