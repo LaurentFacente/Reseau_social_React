@@ -1,74 +1,106 @@
-# ![left 100%](https://github.com/thierry-laval/archives/blob/master/images/Logo_OpenClassrooms.png?raw=true) OpenClassrooms - Développeur Web - Création d'un réseau social d’entreprise avec React / Node / MySQL
+#
+
+# OpenClassrooms - Développeur Web - Création d'un réseau social d’entreprise avec React / Node.js / MySQL
+
 ## Auteur
 
-👤 &nbsp; **Laurent FACENTE**
+👤 **Laurent FACENTE**\
+📎 LinkedIn: [Laurent Facente](https://www.linkedin.com/in/laurentFacente/ "Visitez mon profil LinkedIn")
 
-* LinkedIn: [@Laurent Facente](https://www.linkedin.com/in/laurentFacente/ "Visitez mon profil LinkedIn")
+---
 
-***
-## 📎 Projet 7 - Création d'un réseau social d’entreprise "GROUPOMANIA"
+## 📌 Projet 7 - "GROUPOMANIA" - Création d'un réseau social d’entreprise
 
-### 🔨 Construisez un réseau social avec JavaScript
+### 🎯 Objectif du projet
 
+Développer une application web permettant aux employés d'une entreprise de partager et d'échanger des contenus sous la forme d'un forum.
 
-##### Compétences évaluées
+##### 🚀 Compétences évaluées
 
-* Authentifier un utilisateur et maintenir sa session
-* Personnaliser le contenu envoyé à un client web
-* Gérer un stockage de données à l'aide de SQL
-* Implémenter un stockage de données sécurisé en utilisant SQL
+✅ Authentifier un utilisateur et maintenir sa session\
+✅ Personnaliser le contenu envoyé à un client web\
+✅ Gérer un stockage de données avec SQL\
+✅ Implémenter un stockage de données sécurisé en utilisant SQL
 
-***
+---
 
-### Développement Frontend en JavaScript
-* React.js
-* React Router-dom
-* Axios
-* CSS
+## 🛠 Technologies utilisées
 
-### Développement Backend en JavaScript
+### 🔹 Frontend (React.js)
 
-* Serveur Node.js
-* Framework Express
-* Base de données MySQL
-  * Utilisation de PHPmyAdmin via XAMPP
-  * Sequelize
-* Sécurité OWASP et RGPD
+- React.js
+- React Router-Dom
+- Axios
+- CSS
 
-***
+### 🔹 Backend (Node.js)
 
-### Test de l'application
+- Node.js (Express)
+- Base de données MySQL
+  - ORM Sequelize
+- Sécurité OWASP et conformité RGPD
 
+---
 
-Ceci est le dernier projet de ma formation Openclassrooms, création d'un réseau social d'entreprise : Groupomania
-Il s'agis d'un MVP du produit qui peut etre testé par un employer du groupe dans lequel il est possible de créer des articles et de les partager avec les autres utilisateurs sous la forme d'un forum comme demandé dans le cahier des charges.
-J'avais carte blanche en ce qui concerne le disign.
-J'ai réalise tout le Backend avec Node.js et tout le Frontend avec React. C'est mon premier projet utilisant SQL, c'est également mon premier projet avec React. 
-J'ai beaucoup appris et je vais continuer de faire des projets avec React, car c'est sur cette technologie que j'ai choisi de me spécialiser.
-Je suis conscient que je n'utilise pas toute les possibillitées qu'offre React mais j'ai pris soin de respecter le cahier des charges à la lettre et de fournir un MVP en restant dans les limites de ce qui mettais demandé donc bien entendu de nombreuses ameliorations sont possibles.
+## 📝 Description du projet
 
-Pour lancer le projet :
+Ce projet est le dernier de ma formation OpenClassrooms et consiste à développer un réseau social d'entreprise appelé **Groupomania**.
 
-Clonez le projet dans un dossier sur votre PC (git clone + URL)
+Il s'agit d'un **MVP** permettant à un employé du groupe de créer des articles et de les partager avec les autres collaborateurs. Le design a été laissé libre, et j'ai choisi une approche sobre et efficace.
 
-Se rendre dans dossier backend et installer node et toute les dépendances :
+J'ai développé **l'intégralité du backend avec Node.js** et **tout le frontend avec React**. Ce projet m'a permis de me familiariser avec SQL ainsi qu'avec React, qui est désormais ma technologie de prédilection.
 
-cd backend/ && npm i
+Bien que certaines optimisations soient possibles, j'ai pris soin de respecter **scrupuleusement** le cahier des charges et de livrer un MVP fonctionnel.
 
-Ensuite, lancer le server :
+---
 
+## 🏗 Installation et lancement du projet
+
+### 🔧 Prérequis
+
+- **Node.js** installé sur votre machine
+- **MySQL** pour la gestion de la base de données
+- **Git** pour cloner le projet
+
+### 🚀 Étapes d'installation
+
+1️⃣ **Cloner le projet**
+
+```sh
+git clone <URL_du_projet>
+```
+
+2️⃣ **Installation et lancement du Backend**
+
+```sh
+cd backend/
+npm install
 nodemon server
+```
 
-Enfin, pour lancer le Front, ouvrir un nouveau terminal et se rendre dans le dossier frontend
+3️⃣ **Installation et lancement du Frontend**
 
-cd front-end/
+```sh
+cd frontend/
+npm install
+npm start
+```
 
-puis lancer react
+4️⃣ **Configuration de la base de données**
 
-npm run start
+- Assurez-vous que MySQL est installé et en cours d'exécution.
+- Créez une base de données avec le nom spécifié dans le fichier de configuration.
+- Configurez les informations de connexion à la base de données dans le fichier `.env`.
+- Initialisez les tables avec Sequelize en exécutant la migration :
 
-Pour la BDD :
+```sh
+npm run migrate
+```
 
-Telecharger MySQL, 
+- (Optionnel) Insérer des données de test avec les seeders :
 
-telecharger XAMPP, lancer les serveurs et cliquer sur l'onglet admin pour visualiser la BDD
+```sh
+npm run seed
+```
+
+---
