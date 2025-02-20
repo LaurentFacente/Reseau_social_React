@@ -23,6 +23,7 @@ const Posts = () => {
 			window.location = "/";
 		}
 	};
+
 	// Gestion de la soumission d'un nouveau post
 	// On ecoute les champs de creation d'un post
 	const [title, setTitle] = useState("");
