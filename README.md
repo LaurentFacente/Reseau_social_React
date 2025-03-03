@@ -97,4 +97,42 @@ mysql -u root -p
 CREATE DATABASE <Nom_de_la_base_de_donnees>;
 ```
 
+5️⃣ **Architecture**
+
+src
+├── components
+│ ├── Footer
+│ │ ├── Footer.jsx
+│ │ └── Footer.module.css
+│ ├── Header
+│ │ ├── Header.jsx
+│ │ └── Header.module.css
+│ ├── Button
+│ │ ├── Button.jsx
+│ │ └── Button.module.css
+├── hooks
+│ ├── useAuth.js
+│ ├── useFetch.js
+├── pages
+│ ├── Login
+│ │ ├── Login.jsx
+│ │ ├── Login.module.css
+│ │ └── index.js
+│ ├── Register
+│ │ ├── Register.jsx
+│ │ ├── Register.module.css
+│ │ └── index.js
+│ ├── Feed
+│ │ ├── Feed.jsx
+│ │ ├── Feed.module.css
+│ │ └── index.js
+├── services
+│ ├── api.js
+│ ├── authService.js
+├── utils
+│ ├── validation.js
+│ ├── helpers.js
+├── App.jsx
+├── index.js
+
 ---
